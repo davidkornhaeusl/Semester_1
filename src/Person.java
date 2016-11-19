@@ -4,6 +4,13 @@ public class Person {
 		public String Vorname;
 		public String Nachname;
 		public int Alter;
-		public String Strasse;
-		public String Hausnummer;
+		public Address Address;
+
+		public void setAddress(String strasse, String hausnummer)
+		{
+			Address = new Address();
+			Address.strasse = strasse;
+			Address.hausnummer = hausnummer;
+		}
+		
 }

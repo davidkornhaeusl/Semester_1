@@ -7,11 +7,15 @@ public class DemoAppOOP {
 		Ich.Vorname = "David";
 		Ich.Nachname = "Kornhäusl";
 		Ich.Alter = 24;
-		Ich.Strasse = "Grillenweg";
-		Ich.Hausnummer = "1a";
+		Ich.Address = new Address();
+		Ich.Address.strasse = "Grillenweg";
+		Ich.Address.hausnummer = "1a";
 		
-		System.out.println(Ich.Vorname+"\n"+Ich.Nachname+"\n"+Ich.Alter+"\n"+Ich.Strasse+" "+Ich.Hausnummer);
+		Ich.setAddress("Musterstrasse", "1");
+		
+		System.out.println(Ich.Vorname+"\n"+Ich.Nachname+"\n"+Ich.Alter+"\n"+Ich.Address.strasse+" "+Ich.Address.hausnummer);
 
+		
 	}
 
 }
