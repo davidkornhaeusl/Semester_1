@@ -6,7 +6,7 @@ public class ArrayDemo1 {
 		int[] Array1 = {3,4,5};
 		int[] Array2 = new int[3];
 
-		Array2[0] = 7;
+		Array2[0] = 7; 
 		Array2[1] = 1;
 		Array2[2] = 3;
 
