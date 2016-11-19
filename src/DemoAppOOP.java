@@ -3,7 +3,7 @@ public class DemoAppOOP {
 
 	public static void main(String[] args) {
 
-		Person Ich = new Person();
+		/*Person Ich = new Person();
 		Ich.Vorname = "David";
 		Ich.Nachname = "Kornhäusl";
 		Ich.Alter = 24;
@@ -13,17 +13,19 @@ public class DemoAppOOP {
 		
 		Ich.setAddress("Musterstrasse", "1");
 		
-		System.out.println(Ich.Vorname+"\n"+Ich.Nachname+"\n"+Ich.Alter+"\n"+Ich.Address.strasse+" "+Ich.Address.hausnummer+"\n\n");
+		System.out.println(Ich.Vorname+"\n"+Ich.Nachname+"\n"+Ich.Alter+"\n"+Ich.Address.strasse+" "+Ich.Address.hausnummer+"\n\n");*/
 
 		Konto[] konten = new Konto[1000];
 		
-		Konto max = new Konto();
+		Konto leer = new Konto("");
+		
+		String name = new String("Susi Maier");
+		
+		Konto max = new Konto("Max Mustermann");
 		konten[0] = max;
 		
-
-		Konto susi = new Konto();
+		Konto susi = new Konto("Susi Sorglos");
 		konten[1] = susi;
-		
 		
 		max.aufbuchen(300);
 
@@ -42,6 +44,10 @@ public class DemoAppOOP {
 				konten[i].abbuchen(10);
 			else break;
 		}
+		
+		max.print();
+		susi.print();
+		
 		
 		
 	}

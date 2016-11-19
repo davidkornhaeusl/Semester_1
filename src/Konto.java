@@ -4,33 +4,61 @@ public class Konto {
 	private String kontoinhaber;
 	private int kontostand;
 	
-	public String setInhaber(String kontoinhaber)
+	public Konto(String kontoinhaber)
 	{
 		this.kontoinhaber = kontoinhaber;
-		this.kontostand = 0;
-		
-		return this.kontoinhaber;
+		this.kontostand = 75;
 	}
 	
-	public int aufbuchen(int aufbuchen)
+	public boolean aufbuchen(int aufbuchen)
 	{
-		if(aufbuchen >= 0)
+		if(!validate(0, aufbuchen))
+		{
+			return false;
+		}
+		
 			this.kontostand += aufbuchen;
-		else
-			System.out.println("Kann keinen negativen Wert aufbuchen");
-		return this.kontostand;
+			
+		return true;
 	}
 	
 	public boolean abbuchen(int abbuchen)
 	{
+		if(!validate(abbuchen, 0))
+		{	
+			return false;
+		}
+		
+			kontostand -= abbuchen;
+			return true;
+		
+	}
+	
+	public boolean validate(int abbuchen, int aufbuchen)
+	{
+		if(kontoinhaber == null || kontoinhaber.isEmpty())
+		{	
+			System.out.println("Keine Kontoinhaber gesetzt");
+			return false;
+		}
+		
 		if(kontostand-abbuchen < 0)
 		{
 			System.out.println("Aheben von "+abbuchen+" ist nicht möglich");
 			return false;
 		}
-			kontostand -= abbuchen;
-			return true;
 		
+		if(aufbuchen < 0)
+		{
+			System.out.println("Kann keinen negativen Wert aufbuchen");
+			return false;
+		}
+		return true;
+	}
+	
+	public void print()
+	{
+		System.out.println("Inhaber: "+kontoinhaber+"\nKontostand: "+kontostand);
 	}
 
 }
