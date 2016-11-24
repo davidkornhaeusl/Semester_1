@@ -7,12 +7,27 @@ public class ArrayMatrix {
 		
 		int x = 0;
 				
-		for(int i = 0; i<4; i++)
+		for(int i = 0; i < Array.length; i++)
 		{
-			int x = 0;
-			while(i == x)
+			for(int j = 0; j < Array.length; j++)
 			{
-				System.out.print(Array[i,j]);
+				if(i==j)
+				{
+					Array[i][j] = 1;	
+				}
+				else
+				{
+					Array[i][j] = 0;	
+				}
+				if(j<(Array.length-1))
+				{
+					System.out.print(Array[i][j]+" ");					
+				}
+				else
+				{
+					System.out.println(Array[i][j]);
+				}
+				
 			}
 		}
 			
