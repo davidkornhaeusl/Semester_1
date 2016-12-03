@@ -5,7 +5,6 @@ public class ArrayMatrix {
 		
 		int[][] Array = new int[4][4];
 		
-		int x = 0;
 				
 		for(int i = 0; i < Array.length; i++)
 		{

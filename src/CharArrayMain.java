@@ -1,3 +1,4 @@
+import bruch.Bruch;
 
 public class CharArrayMain {
 
@@ -19,6 +20,8 @@ public class CharArrayMain {
 		a1.print(4, 10);
 		System.out.println(a1.length());
 		System.out.println("Anzahl Objekte: " + CharArray.anzahlObjekte);
+		
+		Bruch b1 = new Bruch(3,4);
 	}
 
 }
