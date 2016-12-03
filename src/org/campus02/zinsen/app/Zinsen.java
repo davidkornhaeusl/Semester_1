@@ -10,7 +10,8 @@ public class Zinsen {
 		
 		z.zinsberechnung(100, 1);
 		System.out.println(z.getZinsen());
-				
+	
+		
 	}
 
 }
