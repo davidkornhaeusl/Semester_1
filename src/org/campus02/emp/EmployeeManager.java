@@ -32,7 +32,7 @@ public class EmployeeManager {
 		ArrayList<Employee> found = new ArrayList<>();
 		for(Employee e : employees)
 		{
-			if(department.equals(e.getDepartment())
+			if(department.equals(e.getDepartment()))
 			{
 				found.add(e);
 			}
