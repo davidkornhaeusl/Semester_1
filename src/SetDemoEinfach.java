@@ -24,6 +24,7 @@ public class SetDemoEinfach {
 		{
 			System.out.println("3 removed");
 		}
+		
 		System.out.println("size? " + setNums.size());
 		
 	}
