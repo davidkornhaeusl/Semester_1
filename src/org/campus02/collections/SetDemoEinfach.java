@@ -1,3 +1,4 @@
+package org.campus02.collections;
 import java.util.HashSet;
 
 public class SetDemoEinfach {
